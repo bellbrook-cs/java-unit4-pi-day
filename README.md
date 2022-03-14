@@ -1,10 +1,57 @@
-# Template Assignment
+# Pi Day
 
 ## Problem Statement
 
+In today's lab you will be tasked with calculating the value of Pi! There are many different ways out there to calculate the value of Pi out there, however, one of my favorites is the Monte Carlo method.
+
+In the demo shown in class, we have a circle of radius 0.5, enclosed by a 1 × 1 square. The area of the circle is `πr^2=π/4`, the area of the square is `1`. If we divide the area of the circle, by the area of the square we get `π/4`.
+
+We then generate a large number of uniformly distributed random points and plot them on the graph. These points can be in any position within the square i.e. between (0,0) and (1,1). If they fall within the circle, they are coloured green, otherwise they are coloured red. We keep track of the total number of points, and the number of points that are inside the circle. If we divide the number of points within the circle by the total number of points we should get a value that is an approximation of the ratio of the areas we calculated above, `π/4`.
+
+In other words,
+
+![](./formula.png)
+
+Now that we have iteration, we have all the tools needed to run this simulation ourselves!
+
+Recall from lesson 6 that `Math.random()` returns a random number between 0, and 1. Other `Math` class methods you will need to know are `Math.pow(b, e)` and `Math.sqrt(x)`.
+
+To test how close you can make estimate the value of PI, you should allow the user to enter the number of iterations you will run the simulation.
+
+After you have run the simulation and counted the number of hits inside the circle, divide the number inside of the circle by the total number of iterations, and multiply by 4. This should be your estimate of Pi!
+
 ## Input Description
 
+The only input will be a single positive integer representing the number of iterations in your simulation.
+
 ## Sample Input/Output
+
+```
+How many iterations would you like to run? 10
+I estimate Pi is: 3.2
+```
+
+```
+How many iterations would you like to run? 100
+I estimate Pi is: 3.32
+```
+
+```
+How many iterations would you like to run? 1000
+I estimate Pi is: 3.116
+```
+
+```
+How many iterations would you like to run? 10000
+I estimate Pi is: 3.1172
+```
+
+```
+How many iterations would you like to run? 100000
+I estimate Pi is: 3.1396
+```
+
+* Note that the simulation is random and your output will vary slightly from mine.
 
 ## Submission
 
